@@ -41,7 +41,7 @@ archivelist = []
 count = 0
 MIN_TIME = datetime(1970, 1, 1)
 EP_REGEX = r'{{\s*(Editprotected|Editprotect|Sudo|EP|请求编辑|請求編輯|编辑请求|編輯請求|請求編輯受保護的頁面|请求编辑受保护的页面|Editsemiprotected|FPER|Edit[ _]+fully-protected|SPER|Edit[ _]+semi-protected|Edit[ _]+protected)\s*}}\n*'
-for section in wikicode.get_sections()[2:]:
+for section in wikicode.get_sections()[1:]:
     title = str(section.get(0).title)
     if args.debug:
         print(title, end='\t')
